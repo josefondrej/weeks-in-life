@@ -2,11 +2,44 @@
 // Each 5th row has a label of its order
 // Each 5th column has a label of its order
 
+function createFirstCell(row_ix) {
+    firstCell = document.createElement('td');
+    firstCell.className = 'row-label';
+    if (row_ix % 5 === 4) {
+        firstCell.innerHTML = row_ix + 1;
+    }
+    return firstCell;
+}
+
+function createHeader() {
+    var firstRow = document.createElement('tr');
+    var firstCell = createFirstCell(0);
+    firstRow.appendChild(firstCell);
+
+    for (var col_ix = 0; col_ix < 52; col_ix++) {
+        if (col_ix % 5 === 0) {
+            cell = document.createElement('td');
+            cell.className = 'col-space';
+            firstRow.appendChild(cell);
+        }
+        cell = document.createElement('td');
+        cell.className = 'col-label';
+        if (col_ix % 5 === 4) {
+            cell.innerHTML = col_ix + 1;
+        }
+        firstRow.appendChild(cell);
+    }
+    return firstRow;
+}
+
 function renderTable(ageInWeeks) {
     var table = document.createElement('table');
     var tableBody = document.createElement('tbody');
     var row, cell, week;
     var counter = 1;
+
+    header = createHeader();
+    tableBody.appendChild(header);
 
     for (var row_ix = 0; row_ix < 100; row_ix++) {
         if (row_ix % 5 === 0) {
@@ -15,6 +48,8 @@ function renderTable(ageInWeeks) {
             tableBody.appendChild(row);
         }
         row = document.createElement('tr');
+        var firstCell = createFirstCell(row_ix);
+        row.appendChild(firstCell);
 
         for (var col_ix = 0; col_ix < 52; col_ix++) {
             if (col_ix % 5 === 0) {
