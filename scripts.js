@@ -8,8 +8,8 @@ function renderTable(ageInWeeks) {
     var row, cell, week;
     var counter = 1;
 
-    for (var rox_ix = 0; rox_ix < 100; rox_ix++) {
-        if (rox_ix % 5 === 0) {
+    for (var row_ix = 0; row_ix < 100; row_ix++) {
+        if (row_ix % 5 === 0) {
             row = document.createElement('tr');
             row.className = 'row-space';
             tableBody.appendChild(row);
