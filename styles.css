@@ -16,14 +16,14 @@ h1 {
 
 .week {
     background-color: white;
-    border-radius: .25em;
-    border: .1em solid #4d4d4d;
-    width: .7em;
-    height: .7em;
+    /*border-radius: .25em;*/
+    border: .15em solid #838383;
+    width: .8em;
+    height: .8em;
 }
 
 .filled {
-    background-color: #b9b9b9;
+    background-color: #a8a8a8;
 }
 
 .col-space {
@@ -41,4 +41,16 @@ h1 {
 
 .footer {
     padding-left: 2.8em;
+}
+
+.col-label {
+    font-size: .8em;
+    padding-top: .2em;
+    padding-left: .2em;
+}
+
+.row-label {
+    font-size: .8em;
+    padding-top: .2em;
+    padding-left: .2em;
 }
