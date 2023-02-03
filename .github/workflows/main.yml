@@ -1,0 +1,18 @@
+on: push
+name: Deploy website on push
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v2
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: web1.attivo.eu
+          username: weeksinlife.de
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: www/
