@@ -64,6 +64,7 @@ function renderTable(ageInWeeks) {
                 week.className += ' filled';
             }
             week.id = 'week-' + counter;
+            week.title = 'Week ' + counter;
             cell.appendChild(week);
             row.appendChild(cell);
             counter++;
