@@ -8,16 +8,16 @@ function renderTable(ageInWeeks) {
     var row, cell, week;
     var counter = 1;
 
-    for (var i = 0; i < 100; i++) {
-        if (i % 5 === 0) {
+    for (var rox_ix = 0; rox_ix < 100; rox_ix++) {
+        if (rox_ix % 5 === 0) {
             row = document.createElement('tr');
             row.className = 'row-space';
             tableBody.appendChild(row);
         }
         row = document.createElement('tr');
 
-        for (var j = 0; j < 52; j++) {
-            if (j % 5 === 0) {
+        for (var col_ix = 0; col_ix < 52; col_ix++) {
+            if (col_ix % 5 === 0) {
                 cell = document.createElement('td');
                 cell.className = 'col-space';
                 row.appendChild(cell);
