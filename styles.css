@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color: #4d4d4d;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 5em;
+}
+
+
+h1 {
+    font-size: 2em;
+    padding-top: 1em;
+    padding-left: .3em;
+}
+
+.week {
+    background-color: white;
+    border-radius: .25em;
+    border: .1em solid #4d4d4d;
+    width: .7em;
+    height: .7em;
+}
+
+.filled {
+    background-color: #e0e0e0;
+}
+
+.col-space {
+    width: .3em;
+    display: block;
+}
+
+.row-space {
+    height: .4em
+}
+
+.birth-date-selector {
+    padding-left: .7em;
+}
+
+.footer {
+    padding-left: .7em;
+}

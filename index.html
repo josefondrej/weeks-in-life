@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weeks in Life</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Weeks in Life</h1>
+<!--form for selector of date-->
+<form class="birth-date-selector">
+    <label for="birthDate">Birth Date:</label>
+    <input type="date" id="birthDate" name="birthDate" value="1990-01-01">
+    <input type="submit" value="Submit">
+</form>
+<br>
+
+<script>
+    var birthDate = new Date(getParameterByName("birthDate"));
+    var ageInWeeks = Math.floor((new Date() - birthDate) / 1000 / 60 / 60 / 24 / 7);
+
+    if (isNaN(ageInWeeks)) {
+        ageInWeeks = 0;
+    }
+
+    renderTable(ageInWeeks);
+</script>
+
+<br>
+<div class="footer">
+    Created by <a href="http://www.josefondrej.com">Josef Ondrej</a>
+</div>
+
+</body>
+</html>
